@@ -50,7 +50,7 @@ namespace PRG.Attributes
 
         public void Heal(float healthToRestore)
         {
-            health += Mathf.Max(health + healthToRestore, MaxHealth);
+            health = Mathf.Min(health + healthToRestore, MaxHealth);
         }
 
         public void TakeDamage(GameObject instigator, float damage)
